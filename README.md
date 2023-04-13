@@ -10,9 +10,9 @@ And for those downloaded .pdf(s), you can summarize its contents (each) by combi
 
 But you have to define those shell environment variables like these (when you want to use Google search API)
 
-# Google Books Search
-export GOOGLE_API_KEY="XXXXXX"
-export GOOGLE_SEARCH_ENGINE_ID="YYYYYY"
+> # Google Books Search
+> export GOOGLE_API_KEY="XXXXXX"
+> export GOOGLE_SEARCH_ENGINE_ID="YYYYYY"
 
 
 Good Luck!!
