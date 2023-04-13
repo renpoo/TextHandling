@@ -9,6 +9,8 @@ And for those downloaded .pdf(s), you can summarize its contents (each) by combi
 
 
 
+
+
 The example of input_file (.txt) is as below.
 
 ##### ##### ##### ##### ##### ##### ##### ##### ##### ##### 
