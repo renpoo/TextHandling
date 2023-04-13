@@ -8,7 +8,7 @@ For the downloaded .pdf files, you can summarize their contents using a combinat
 
 However, you need to define the following shell environment variables if you want to use the Google search API:
 
-> # Google Books Search
+> # Google Search via API
 
 > export GOOGLE_API_KEY="XXXXXX"
 
