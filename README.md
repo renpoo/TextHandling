@@ -8,7 +8,14 @@ According to the .txt, SemiautoSearchOnNet/search_and_download.py script can sea
 And for those downloaded .pdf(s), you can summarize its contents (each) by combination of Automator & "Text > Summarize" with some shell scripts and python codes (by executing Automator.workflown on macOS).
 
 
+But you have to define those shell environment variables like these (when you want to use Google search API)
 
+# Google Books Search
+export GOOGLE_API_KEY="XXXXXX"
+export GOOGLE_SEARCH_ENGINE_ID="YYYYYY"
+
+
+Good Luck!!
 
 
 The example of input_file (.txt) is as below.
