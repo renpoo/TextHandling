@@ -70,16 +70,16 @@ root_dir=$arg1
 input_dir=$arg2
 output_dir=$arg3
 
+
+compress_ratio=1
+
+
 for f in "$input_dir"/*_cleaned.txt
 do
   if [ -f "$f" ]; then
     outfile="$output_dir/${f:t:r}_summarized.txt"
-    summary=$(osascript -e "set theFile to POSIX file \"$f\"" -e "set theText to read theFile as «class utf8»" -e "set theSummary to summarize theText in 20" -e "return theSummary")
+    summary=$(osascript -e "set theFile to POSIX file \"$f\"" -e "set theText to read theFile as «class utf8»" -e "set theSummary to summarize theText in $compress_ratio" -e "return theSummary")
     echo "$summary" &gt; "$outfile"
-
-#	greatSummary=$(osascript -e "set theFile to POSIX file \"$f\"" -e "set theText to read theFile as «class utf8»" -e "set theSummary to summarize theText in 1" -e "return theSummary")
-#	osascript -e "display dialog \"$greatSummary\" --result: displays one inspiring sentence"
-
   fi
 done
 </string>
@@ -195,7 +195,7 @@ done
 				<key>isViewVisible</key>
 				<integer>1</integer>
 				<key>location</key>
-				<string>645.250000:439.000000</string>
+				<string>493.500000:520.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>

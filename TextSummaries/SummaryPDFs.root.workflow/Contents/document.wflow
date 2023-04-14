@@ -65,9 +65,11 @@ input_pdf_dir=$root_dir/PdfsToSummarize
 substituted_txt_dir=$root_dir/TextsFromPdfs
 preprocessed_txt_dir=$root_dir/PreprocessedTexts
 summarized_txt_dir=$root_dir/SummarizedTexts
+postprocessed_txt_dir=$root_dir/PostprocessedSummarizedTexts
+
 
 temp_file="/tmp/arguments.SummaryPDFs.root.txt"
-echo "$root_dir,$input_pdf_dir,$substituted_txt_dir,$preprocessed_txt_dir,$summarized_txt_dir" &gt; "$temp_file"
+echo "$root_dir,$input_pdf_dir,$substituted_txt_dir,$preprocessed_txt_dir,$summarized_txt_dir,$postprocessed_txt_dir" &gt; "$temp_file"
 
 echo $root_dir,$input_pdf_dir,$substituted_txt_dir
 </string>
@@ -183,7 +185,7 @@ echo $root_dir,$input_pdf_dir,$substituted_txt_dir
 				<key>isViewVisible</key>
 				<integer>1</integer>
 				<key>location</key>
-				<string>637.750000:398.000000</string>
+				<string>486.000000:184.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -369,17 +371,15 @@ echo $root_dir,$input_pdf_dir,$substituted_txt_dir
 						<string>5</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>location</key>
-				<string>637.750000:439.000000</string>
+				<string>486.000000:368.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Workflow.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
 			<key>isViewVisible</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>action</key>
@@ -546,17 +546,15 @@ echo $root_dir,$substituted_txt_dir,$preprocessed_txt_dir</string>
 						<string>4</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>location</key>
-				<string>637.750000:480.000000</string>
+				<string>486.000000:550.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
 			<key>isViewVisible</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>action</key>
@@ -733,17 +731,15 @@ echo $root_dir,$substituted_txt_dir,$preprocessed_txt_dir</string>
 						<string>5</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>location</key>
-				<string>637.750000:521.000000</string>
+				<string>486.000000:734.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Workflow.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
 			<key>isViewVisible</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>action</key>
@@ -911,17 +907,15 @@ echo $root_dir,$preprocessed_txt_dir,$summarized_txt_dir
 						<string>4</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>location</key>
-				<string>637.750000:562.000000</string>
+				<string>486.000000:916.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
 			<key>isViewVisible</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>action</key>
@@ -1098,50 +1092,431 @@ echo $root_dir,$preprocessed_txt_dir,$summarized_txt_dir
 						<string>5</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>location</key>
-				<string>637.750000:603.000000</string>
+				<string>486.000000:1206.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Workflow.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
 			<key>isViewVisible</key>
-			<integer>0</integer>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>com.apple.cocoa.string</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>2.0.3</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>COMMAND_STRING</key>
+					<dict/>
+					<key>CheckedForUserDefaultShell</key>
+					<dict/>
+					<key>inputMethod</key>
+					<dict/>
+					<key>shell</key>
+					<dict/>
+					<key>source</key>
+					<dict/>
+					<key>temporary items path</key>
+					<dict/>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array>
+						<string>com.apple.cocoa.string</string>
+					</array>
+				</dict>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Run Shell Script.action</string>
+				<key>ActionName</key>
+				<string>Run Shell Script</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>COMMAND_STRING</key>
+					<string>temp_file="/tmp/arguments.SummaryPDFs.root.txt"
+IFS=',' read -A args &lt;&lt;&lt; "$(cat "$temp_file")"
+root_dir=${args[1]}
+summarized_txt_dir=${args[5]}
+postprocessed_txt_dir=${args[6]}
+
+echo $root_dir,$summarized_txt_dir,$postprocessed_txt_dir
+</string>
+					<key>CheckedForUserDefaultShell</key>
+					<true/>
+					<key>inputMethod</key>
+					<integer>1</integer>
+					<key>shell</key>
+					<string>/bin/zsh</string>
+					<key>source</key>
+					<string></string>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.RunShellScript</string>
+				<key>CFBundleVersion</key>
+				<string>2.0.3</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<false/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryUtilities</string>
+				</array>
+				<key>Class Name</key>
+				<string>RunShellScriptAction</string>
+				<key>InputUUID</key>
+				<string>9EB260B6-BF90-44A3-A2A9-65D5525935FD</string>
+				<key>Keywords</key>
+				<array>
+					<string>Shell</string>
+					<string>Script</string>
+					<string>Command</string>
+					<string>Run</string>
+					<string>Unix</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>033FF337-86CA-4B08-9372-B4B699C719ED</string>
+				<key>UUID</key>
+				<string>79A4FECA-4A4A-4253-91FA-F9B4B785DC50</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<integer>0</integer>
+						<key>name</key>
+						<string>inputMethod</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+					<key>1</key>
+					<dict>
+						<key>default value</key>
+						<false/>
+						<key>name</key>
+						<string>CheckedForUserDefaultShell</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>1</string>
+					</dict>
+					<key>2</key>
+					<dict>
+						<key>default value</key>
+						<string></string>
+						<key>name</key>
+						<string>source</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>2</string>
+					</dict>
+					<key>3</key>
+					<dict>
+						<key>default value</key>
+						<string></string>
+						<key>name</key>
+						<string>COMMAND_STRING</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>3</string>
+					</dict>
+					<key>4</key>
+					<dict>
+						<key>default value</key>
+						<string>/bin/sh</string>
+						<key>name</key>
+						<string>shell</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>4</string>
+					</dict>
+				</dict>
+				<key>conversionLabel</key>
+				<integer>0</integer>
+				<key>isViewVisible</key>
+				<integer>1</integer>
+				<key>location</key>
+				<string>486.000000:1388.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/Base.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>*</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>2.0.1</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>batchItems</key>
+					<dict/>
+					<key>documentPath</key>
+					<dict>
+						<key>isPathPopUp</key>
+						<true/>
+						<key>variableUUIDsInMenu</key>
+						<array/>
+					</dict>
+					<key>itemsBatchSize</key>
+					<dict/>
+					<key>numberOfWorkflows</key>
+					<dict/>
+					<key>returnWorkflowOutput</key>
+					<dict/>
+					<key>temporary items path</key>
+					<dict/>
+					<key>waitForWorkflow</key>
+					<dict/>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array>
+						<string>*</string>
+					</array>
+				</dict>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Run Workflow.action</string>
+				<key>ActionName</key>
+				<string>Run Workflow</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>batchItems</key>
+					<false/>
+					<key>documentPath</key>
+					<string>~/Desktop/TextSummaries/text_postprocessing.workflow</string>
+					<key>itemsBatchSize</key>
+					<integer>1</integer>
+					<key>numberOfWorkflows</key>
+					<integer>0</integer>
+					<key>returnWorkflowOutput</key>
+					<true/>
+					<key>waitForWorkflow</key>
+					<true/>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.ExecuteWorkflow</string>
+				<key>CFBundleVersion</key>
+				<string>2.0.1</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<true/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryUtilities</string>
+				</array>
+				<key>Class Name</key>
+				<string>ExecuteWorkflow</string>
+				<key>InputUUID</key>
+				<string>A5AA1830-9628-4280-91C7-8AD7A10F64D0</string>
+				<key>Keywords</key>
+				<array/>
+				<key>OutputUUID</key>
+				<string>5967CDAA-F63E-427B-937E-7DFBE7FA4A13</string>
+				<key>UUID</key>
+				<string>A7D4479D-F97E-4F24-A4CC-BB8C25FECCC2</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<integer>1</integer>
+						<key>name</key>
+						<string>itemsBatchSize</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+					<key>1</key>
+					<dict>
+						<key>default value</key>
+						<true/>
+						<key>name</key>
+						<string>waitForWorkflow</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>1</string>
+					</dict>
+					<key>2</key>
+					<dict>
+						<key>default value</key>
+						<integer>0</integer>
+						<key>name</key>
+						<string>numberOfWorkflows</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>2</string>
+					</dict>
+					<key>3</key>
+					<dict>
+						<key>default value</key>
+						<false/>
+						<key>name</key>
+						<string>batchItems</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>3</string>
+					</dict>
+					<key>4</key>
+					<dict>
+						<key>default value</key>
+						<string></string>
+						<key>name</key>
+						<string>documentPath</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>4</string>
+					</dict>
+					<key>5</key>
+					<dict>
+						<key>default value</key>
+						<true/>
+						<key>name</key>
+						<string>returnWorkflowOutput</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>5</string>
+					</dict>
+				</dict>
+				<key>conversionLabel</key>
+				<integer>0</integer>
+				<key>isViewVisible</key>
+				<integer>1</integer>
+				<key>location</key>
+				<string>486.000000:1572.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Run Workflow.action/Contents/Resources/Base.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>44B1F107-38FE-4F33-86F4-13DE64077954</key>
-		<dict>
-			<key>from</key>
-			<string>A639EF25-98D2-4C88-B250-38D5A5010302 - A639EF25-98D2-4C88-B250-38D5A5010302</string>
-			<key>to</key>
-			<string>D81E19D5-4C35-4351-86BC-4B69DEE43A27 - D81E19D5-4C35-4351-86BC-4B69DEE43A27</string>
-		</dict>
-		<key>5B8E475D-1F2F-4621-86D2-85BE7C4FCC7A</key>
-		<dict>
-			<key>from</key>
-			<string>CFA81B47-B436-4403-8045-CC13CC9847F3 - CFA81B47-B436-4403-8045-CC13CC9847F3</string>
-			<key>to</key>
-			<string>A639EF25-98D2-4C88-B250-38D5A5010302 - A639EF25-98D2-4C88-B250-38D5A5010302</string>
-		</dict>
-		<key>BDAB3232-1650-4C42-845B-81A33A628189</key>
-		<dict>
-			<key>from</key>
-			<string>F4789613-7C8C-496F-86F5-660C9E13E71A - F4789613-7C8C-496F-86F5-660C9E13E71A</string>
-			<key>to</key>
-			<string>CFA81B47-B436-4403-8045-CC13CC9847F3 - CFA81B47-B436-4403-8045-CC13CC9847F3</string>
-		</dict>
-		<key>DEB6DAA2-7690-4C91-8961-11B4EE230985</key>
+		<key>27C9CFDB-0A11-4151-86C4-C9429291FA3D</key>
 		<dict>
 			<key>from</key>
 			<string>D81E19D5-4C35-4351-86BC-4B69DEE43A27 - D81E19D5-4C35-4351-86BC-4B69DEE43A27</string>
 			<key>to</key>
 			<string>91CE9A67-CE0E-4F4C-A266-8E221E1CD74E - 91CE9A67-CE0E-4F4C-A266-8E221E1CD74E</string>
 		</dict>
-		<key>FE827762-F9A1-463B-9CF4-2F73FC703F8E</key>
+		<key>3BF43067-21D5-47AB-A39B-C7A1AC7A1E8E</key>
+		<dict>
+			<key>from</key>
+			<string>79A4FECA-4A4A-4253-91FA-F9B4B785DC50 - 79A4FECA-4A4A-4253-91FA-F9B4B785DC50</string>
+			<key>to</key>
+			<string>A7D4479D-F97E-4F24-A4CC-BB8C25FECCC2 - A7D4479D-F97E-4F24-A4CC-BB8C25FECCC2</string>
+		</dict>
+		<key>513FB1E6-33F2-47FA-9450-37B9E5788BB4</key>
+		<dict>
+			<key>from</key>
+			<string>A639EF25-98D2-4C88-B250-38D5A5010302 - A639EF25-98D2-4C88-B250-38D5A5010302</string>
+			<key>to</key>
+			<string>D81E19D5-4C35-4351-86BC-4B69DEE43A27 - D81E19D5-4C35-4351-86BC-4B69DEE43A27</string>
+		</dict>
+		<key>64352E9E-E240-4F07-83F3-3F841A4D15E7</key>
+		<dict>
+			<key>from</key>
+			<string>40DD9FCA-A626-4543-8758-F1C70C114F8B - 40DD9FCA-A626-4543-8758-F1C70C114F8B</string>
+			<key>to</key>
+			<string>79A4FECA-4A4A-4253-91FA-F9B4B785DC50 - 79A4FECA-4A4A-4253-91FA-F9B4B785DC50</string>
+		</dict>
+		<key>667F0FCA-477A-4527-927F-8FA4E8CD05E9</key>
+		<dict>
+			<key>from</key>
+			<string>F4789613-7C8C-496F-86F5-660C9E13E71A - F4789613-7C8C-496F-86F5-660C9E13E71A</string>
+			<key>to</key>
+			<string>CFA81B47-B436-4403-8045-CC13CC9847F3 - CFA81B47-B436-4403-8045-CC13CC9847F3</string>
+		</dict>
+		<key>DCD99BE9-CC24-4292-9ED8-3433B2E69082</key>
+		<dict>
+			<key>from</key>
+			<string>CFA81B47-B436-4403-8045-CC13CC9847F3 - CFA81B47-B436-4403-8045-CC13CC9847F3</string>
+			<key>to</key>
+			<string>A639EF25-98D2-4C88-B250-38D5A5010302 - A639EF25-98D2-4C88-B250-38D5A5010302</string>
+		</dict>
+		<key>DF4F2036-84B1-47A3-9DD3-EBA120F0112A</key>
 		<dict>
 			<key>from</key>
 			<string>91CE9A67-CE0E-4F4C-A266-8E221E1CD74E - 91CE9A67-CE0E-4F4C-A266-8E221E1CD74E</string>

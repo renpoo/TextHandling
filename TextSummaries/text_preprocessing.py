@@ -9,11 +9,17 @@ def preprocess_text(input_file, output_file):
     # Remove unnecessary escape characters
     text = text.replace('\\', '')
 
-    # Replace multiple newlines with a single newline
-    text = re.sub(r'\n+', '\n', text)
+    # Replace multiple newlines with a single space
+    text = re.sub(r'\n+', ' ', text)
 
-    # Replace multiple spaces with a single space
-    text = re.sub(r' +', ' ', text)
+    # # Delete unnecessary newlines
+    # text = re.sub(r'(?<!\n)\n(?!\n)', ' ', text)
+
+    # # Replace multiple spaces with a single space
+    # text = re.sub(r' +', ' ', text)
+
+    # Replace two or more spaces with a single space
+    text = re.sub(r' {2,}', ' ', text)
 
     # Separate chapters or paragraphs
     text = re.sub(r'([\u3000]+)', r'\n\1\n', text)

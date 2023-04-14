@@ -74,7 +74,7 @@ for f in "$input_dir"/*.txt
 do
   if [ -f "$f" ]; then
     outfile="$output_dir/${f:t:r}_cleaned.txt"
-    python3 $root_dir/text_preprocessing.py "$f" "$outfile"
+    python3 $root_dir/text_postprocessing.py "$f" "$outfile"
   fi
 done
 </string>
@@ -190,7 +190,7 @@ done
 				<key>isViewVisible</key>
 				<integer>1</integer>
 				<key>location</key>
-				<string>493.750000:603.000000</string>
+				<string>493.750000:481.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
