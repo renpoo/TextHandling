@@ -11,7 +11,7 @@ This project contains two main functionalities:
 To search for and download documents, use the `search_and_download.py` script with the following command:
 
 ```sh
-python search_and_download.py input_file output_folder
+python downloader_with_search.py input_file.txt output_folder [search_output_file]
 ```
 
 Before using the Google Search API, you need to define the following shell environment variables:
