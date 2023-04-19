@@ -8,7 +8,7 @@ This project contains two main functionalities:
 
 ## SemiautoSearchOnNet
 
-To search for and download documents, use the `search_and_download.py` script with the following command:
+To search for and download documents, use the `downloader_with_search.py` script with the following command:
 
 ```sh
 python downloader_with_search.py input_file.txt output_folder [search_output_file]
