@@ -35,5 +35,5 @@ This project contains a set of scripts and an Automator workflow to extract text
 ## Usage
 
 1. Place the PDF files you want to process in the `PdfsToSummarize` folder.
-2. Run the main Automator workflow.
+2. Run the main Automator workflow "SummaryPDFs.workflow".
 3. The summarized text will be generated in the `PostprocessedSummarizedTexts` folder.
